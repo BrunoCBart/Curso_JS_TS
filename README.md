@@ -7,7 +7,7 @@ https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/
 ## Módulos
 
 - [X] Seção 01: Configurando o Ambiente no Windows e Linux
-- [X] Seção 02: JavaScript basico para iniciantes
+- [X] [Seção 02](https://github.com/BrunoCBart/Curso_JS_TS/tree/main/secao-02): JavaScript basico para iniciantes
 - [ ] Seção 03: Lógica de programação
 - [ ] Seção 04: JavasScript Funções (Avançado)
 - [ ] Seção 05: JavaScript Arrays (Avançado)
