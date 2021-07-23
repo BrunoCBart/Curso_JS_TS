@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(2, 151, 151);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.container {
+    padding: 1em;
+}
+
+button {
+    margin-top: 1em;
+    padding: .7em;
+}
+
+p {
+    margin: .5em 0;
+    font-size: 1.2em;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.col + .col {
+    margin-left: 4em;
+}
+
+.col {
+    width: 50%;
+}
+
+.peso, .altura {
+    width: 100%;
+    height: 3em;
+}
+
+.title {
+    font-size: 1.8em;
+}
+
+.title-2 {
+    font-size: 1.5em;
+}
