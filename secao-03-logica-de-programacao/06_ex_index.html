@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Exercicio IMC</title>
+    <link rel="stylesheet" href="06_style.css">
 </head>
 <body>
-    
+
+    <section class="card container">
+        <h1 class="title">Tabela IMC</h1>
+        <div class= "d-flex">
+            <div class="col">
+                <h2 class="title-2">IMC</h2>
+                <p>Menos que 18,5<p>
+                <p>Entre 18,5 e 24,9</p>
+                <p>Entre 25 e 29,9</p>
+                <p>Entre 30 e 34,9</p>
+                <p>Entre 35 e 39,9</p>
+                <p>Mais do que 40</p>
+            </div>
+            <div class="col">
+                <h2 class="title-2">Resultado</h2>
+                <p>Abaixo do peso</p>
+                <p>Peso normal</p>
+                <p>Sobrepeso</p>
+                <p>Obesidade grau 1</p>
+                <p>Obesidade grau 2</p>
+                <p>Obesidade grau 3</p>
+            </div>
+        </div>
+        <h1 class="title">Calcule seu IMC</h1>
+            <p class="subtitle">Peso:</p>
+            <input type="text" name="peso" id="" class="peso">
+            <p class="subtitle">Altura:</p>
+            <input type="text" name="peso" class="altura">
+            <button onclick="imc()">Enviar</button>
+        <div class="resultado"></div>
+    </section>
+
+    <script src="06_imc.js"></script>
 </body>
 </html>
