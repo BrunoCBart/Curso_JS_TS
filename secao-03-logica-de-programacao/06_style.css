@@ -52,3 +52,13 @@ p {
 .title-2 {
     font-size: 1.5em;
 }
+
+.paragrafo-resultado {
+    background-color:rgb(114, 248, 114);
+    padding: .6em;
+}
+
+.bad {
+    background-color: tomato;
+    padding: .6em;
+}
