@@ -1,4 +1,3 @@
-// wierd
 function relogio() {
   function criaHoraSegundos(segundos) {
     const data = new Date(segundos * 1000);
