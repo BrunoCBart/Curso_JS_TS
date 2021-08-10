@@ -9,7 +9,7 @@ https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/
 - [X] Seção 01: Configurando o Ambiente no Windows e Linux
 - [X] [Seção 02](https://github.com/BrunoCBart/Curso_JS_TS/tree/main/secao-02): JavaScript basico para iniciantes
 - [X] [Seção 03](https://github.com/BrunoCBart/curso-js-ts/tree/main/secao-03-logica-de-programacao): Lógica de programação
-- [ ] [Seção 04](https://github.com/BrunoCBart/curso-js-ts/tree/main/secao-04-javascript-funcoes(avancado)): JavasScript Funções (Avançado)
+- [X] [Seção 04](https://github.com/BrunoCBart/curso-js-ts/tree/main/secao-04-javascript-funcoes(avancado)): JavasScript Funções (Avançado)
 - [ ] Seção 05: JavaScript Arrays (Avançado)
 - [ ] Seção 06: JavaScript Objetos e Prototypes (Avançado)
 - [ ] Seção 07: JavaScript Classes - Programação Orientada a Objetos
