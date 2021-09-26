@@ -19,16 +19,24 @@ class ValidateForm {
   }
 
   handleSubmit() {
-    if (this.inputsAreBlank())
-      if (!this.nameCheck())
-        if (!this.passwordCheck()) return
+    const validInputs = this.inputsAreNotBlank()
+    // console.log(validInputs, 'inputs')
+    const validName = this.nameCheck()
+    // console.log(validName, 'validName')
+    const validCPF = this.validateCpf()
+    // console.log(validCPF, 'validCPF')
+    const validPass = this.passwordCheck()
+    // console.log(validPass, 'validPass')
 
-    console.log('Forms ENVIADO =)')
+    if (validInputs && validName && validCPF && validPass) {
+      alert('Formulário enviado')
+      this.form.submit()
+    }
 
   }
 
-  inputsAreBlank() {
-    let blank = false
+  inputsAreNotBlank() {
+    let blank = true
     const formInputs = this.form.querySelectorAll('input')
     const errorMsg = this.form.querySelectorAll('.error-msg')
 
@@ -37,7 +45,7 @@ class ValidateForm {
       const label = input.previousElementSibling
       if (!input.value) {
         this.makeErrorMessage(input, `${label.innerHTML} não pode estar em branco`)
-        blank = true
+        blank = false
       }
     })
     return blank
@@ -52,7 +60,7 @@ class ValidateForm {
     const name = nameInput.value
     const regex = /^[A-Za-z0-9_-]*$/
     let onlyNumsLetters = regex.test(name)
-    if (!onlyNumsLetters) this.makeErrorMessage(nameInput, 'Nome precisa ser composto por apenas letras e números')
+    if (!onlyNumsLetters) this.makeErrorMessage(nameInput, 'Nome precisa ser composto por apenas letras e números, sem espaços')
     if (!name) onlyNumsLetters = false
     return onlyNumsLetters
   }
@@ -77,9 +85,12 @@ class ValidateForm {
   repeatPasswordIsEqual() {
     const password = passInput.value
     const repeatPass = passRepeatInput.value
-    console.log('aqui')
 
-    if (password !== repeatPass) this.makeErrorMessage(passRepeatInput, 'Repetir senha deve ser igual a senha')
+    if (password !== repeatPass) {
+      this.makeErrorMessage(passInput, 'Repetir senha e senha devem ser igual a senha')
+      this.makeErrorMessage(passRepeatInput, 'Repetir senha e senha devem ser igual a senha')
+    }
+
     return password === repeatPass;
   }
 
@@ -88,28 +99,47 @@ class ValidateForm {
     return cpf.charAt(0).repeat(11) === cpf
   }
 
-  validateCpf() {
-    let cpf = cpfInput.value;
-    cpf = cpf.replace(/\D+/g, '')
+  cpfIsValid(cpf) {
+
     if (cpf.length !== 11) {
-      this.makeErrorMessage(cpfInput, 'O CPF precisa ter 11 números')
+      this.makeErrorMessage(cpfInput, 'O CPF precisa ter 11 digitos')
       return false
     }
     if (this.isSequence(cpf)) {
       this.makeErrorMessage(cpfInput, 'O CPF não pode ser sequência')
       return false
     }
+    return true
+
+  }
+
+  validateCpf() {
+    let cpf = cpfInput.value;
+    const regex = /\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}/
+    const cpfIsMatch = cpf.match(regex)
+
+    if (!cpfIsMatch) {
+      this.makeErrorMessage(cpfInput, 'O cpf deve estar no formato de digitos ou com ponto e hífen')
+      return false
+    }
+
+    cpf = cpf.replace(/\D+/g, '')
+    if (!this.cpfIsValid(cpf)) return false
+
     const cpfToVerify = Array.from(cpf.slice(0, -2));
 
-    const digit1 = this.cpfDigit(cpfToVerify);
-    const digit2 = this.cpfDigit([...cpfToVerify, digit1]);
-
-    const newCpf = [...cpfToVerify, digit1, digit2].join('');
+    const newCpf = this.getDigit(cpfToVerify).join('')
 
     if (newCpf !== cpf) this.makeErrorMessage(cpfInput, 'Digite um CPF válido')
     return newCpf === cpf;
   }
 
+
+  getDigit(cpfToVerify) {
+    const digit1 = this.cpfDigit(cpfToVerify);
+    const digit2 = this.cpfDigit([...cpfToVerify, digit1]);
+    return [...cpfToVerify, digit1, digit2]
+  }
   cpfDigit(cpf) {
     let regressive = cpf.length + 1
 

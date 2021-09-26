@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(109, 149, 223);
+  font-family: sans-serif;
 }
 
 .form-container {
