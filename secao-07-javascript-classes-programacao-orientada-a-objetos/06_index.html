@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Cadastro</title>
+  <link rel="stylesheet" href="06_style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Formulário de Cadastro</h1>
+    <ul>
+      <li>Nenhum campo pode estar vazio</li>
+      <li>Usuário só podera conter letras e/ou números</li>
+      <li>Usuário devera ter entre  3 e 12 caracteres</li>
+      <li>Senha precisa ter entre 6 e 12 caracteres</li>
+    </ul>
+    <form action="" class="forms">
+      <label for="name">Nome</label>
+      <input type="text" id="name">
+      <label for="last-name">Sobrenome</label>
+      <input type="text" id="last-name">
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf">
+      <label for="password">Senha</label>
+      <input type="password" id="pass">
+      <label for="pass">Repetir senha</label>
+      <input type="password" id="pass-repeat">
+      <button type="submit" id="btn-submit">Submit</button>
+    </form> 
+  </div>
+  <script src="06_formulario_de_cadastro.js"></script>
+</body>
+</html>

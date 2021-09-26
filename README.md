@@ -12,7 +12,7 @@ https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/
 - [X] [Seção 04](https://github.com/BrunoCBart/curso-js-ts/tree/main/secao-04-javascript-funcoes(avancado)): JavasScript Funções (Avançado)
 - [X] [Seção 05](https://github.com/BrunoCBart/curso-js-ts/tree/main/secao-05-javascript-arrays(avancado)): JavaScript Arrays (Avançado)
 - [ ] [Seção 06](https://github.com/BrunoCBart/curso-js-ts/tree/main/secao-06-javascript-objetos-e-prototypes(avancado)): JavaScript Objetos e Prototypes (Avançado)
-- [ ] Seção 07: JavaScript Classes - Programação Orientada a Objetos
+- [x] Seção 07: JavaScript Classes - Programação Orientada a Objetos
 - [ ] Seção 08: JavaScript assíncrono - Promises, Ajax, Fetch e Async/Await
 - [ ] Seção 09: JavaScript Node, Npm, Express e MongoDB (NodeJS)
 - [ ] Seção 11: JavaScript + Node - Projeto Agenda (com Express + MongoDB)
