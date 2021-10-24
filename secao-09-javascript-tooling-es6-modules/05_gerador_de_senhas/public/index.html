@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gerador de senhas</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>Gerador de senhas</h1>
+    <form action="" id="form">
+      Tamanho da senha:
+      <input type="number" id="password-length"></input>
+      <label for="add-numbers">
+        Adicionar números
+        <input type="checkbox" id="numbers"></input>
+      </label>
+      <label for="uppercase-letters">
+        Letras maiúsculas
+        <input type="checkbox" id="uppercase-letters"></input>
+      </label>
+      <label for="lowercase-letters">
+        Letrar minúsculas
+        <input type="checkbox" id="lowercase-letters"></input>
+      </label>
+      <label for="symbols">
+        Símbolos
+        <input type="checkbox" id="symbols"></input>
+      </label>
+      <button type="submit" id="generate-pass">Gerar senha</button>
+    </form>
+    <div id="password">Senha</div>
+  </section>
+
+  <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>
