@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"MACAA,MAAM,MAGNC,QAAQC,IADM,CAAEC,KADH,W","sources":["webpack://01-webpack-babel-boilerplate/./src/index.js"],"sourcesContent":["const something = 'smt'\nalert('oi')\nconst nome = 'tadeu';\nconst nomes = { nome };\nconsole.log(nomes)"],"names":["alert","console","log","nome"],"sourceRoot":""}
