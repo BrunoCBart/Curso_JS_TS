@@ -1,19 +1,15 @@
 const express = require('express');
 
+const homeRouter = require('./routes/home')
+
+
 const app = express();
 
 
 app.use(express.json())
 
 
-app.get('/', (req, res) => {
-  res.send(
-  `<form action="/" method="POST">
-  Nome: <input type="text" name="name">
-  <button>Enviar</button>
-  <form/>
-  `);
-})
+app.get('/', homeRouter)
 
 // App.post didn't work with forms for some reason
 
